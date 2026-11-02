@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL || '/';
+
 export const sightseeingRegions = [
   "All",
   "Puri Dham",
@@ -18,7 +20,7 @@ export const sightseeingSpots = [
     bestTime: "06:00 AM – 10:30 PM (Arati timings)",
     duration: "2 - 3 Hours",
     entryFee: "Free Entry (Special Puja through Pandaship optional)",
-    image: "/images/hero-jagannath.jpg",
+    image: `${base}images/hero-jagannath.jpg`,
     description: "The supreme sanctum of Lord Jagannath, Balabhadra, and Devi Subhadra. Built in the 12th century by King Anantavarman Chodaganga Deva, it stands 214 feet high and is considered one of the holiest pilgrim sites on Earth.",
     highlights: [
       "Darshan of the Holy Trinity in the sanctum sanctorum",
@@ -38,7 +40,7 @@ export const sightseeingSpots = [
     bestTime: "06:00 AM – 06:00 PM (Sunrise ideal)",
     duration: "2 - 3 Hours",
     entryFee: "₹40 (Indian Citizens) / ₹600 (Foreign Nationals)",
-    image: "/images/hero-konark.jpg",
+    image: `${base}images/hero-konark.jpg`,
     description: "Conceived as a colossal 24-wheeled chariot of Surya the Sun God pulled by seven spirited horses, this 13th-century sandstone masterpiece is celebrated for its sundial wheels, erotic sculptures, and celestial musician friezes.",
     highlights: [
       "Intricately carved 24 stone chariot wheels acting as exact sundials",
@@ -58,7 +60,7 @@ export const sightseeingSpots = [
     bestTime: "07:00 AM – 02:00 PM",
     duration: "4 - 5 Hours (including boat cruise)",
     entryFee: "Motorized boat rental at OTDC counter (₹1,500 – ₹3,000 per boat)",
-    image: "/images/hero-chilika.jpg",
+    image: `${base}images/hero-chilika.jpg`,
     description: "Satapada sits at the meeting point of Chilika lagoon and the Bay of Bengal. Devotees and nature lovers board motorized country boats to spot endangered Irrawaddy dolphins and visit Rajahansa Island and the scenic Sea Mouth (Muhan).",
     highlights: [
       "Natural Irrawaddy dolphin sightings in open lagoon waters",
@@ -78,7 +80,7 @@ export const sightseeingSpots = [
     bestTime: "07:00 AM – 06:30 PM",
     duration: "1 Hour",
     entryFee: "Free Entry",
-    image: "/images/dhauli-shanti-stupa.jpg",
+    image: `${base}images/dhauli-shanti-stupa.jpg`,
     description: "Built atop Dhauli hill overlooking the Daya river plains where the historic Kalinga War was fought in 261 BCE. Witnessing the battlefield, Emperor Ashoka renounced bloodshed, adopted Buddhism, and established universal peace edicts.",
     highlights: [
       "Iconic white Peace Pagoda dome adorned with stone-carved Buddha reliefs",
@@ -98,7 +100,7 @@ export const sightseeingSpots = [
     bestTime: "06:00 AM – 09:00 PM",
     duration: "2 Hours",
     entryFee: "Free Entry",
-    image: "/images/hero-bhubaneswar.jpg",
+    image: `${base}images/hero-bhubaneswar.jpg`,
     description: "The crown jewel of Bhubaneswar's temple architecture, dedicated to Lord Harihara (a combined form of Vishnu and Shiva). Its towering 180-foot deula spire dominates the Old Town skyline alongside the sacred Bindusagar lake.",
     highlights: [
       "Magnificent 11th-century Somavamsi dynasty architecture",
@@ -118,7 +120,7 @@ export const sightseeingSpots = [
     bestTime: "09:00 AM – 05:00 PM",
     duration: "2 Hours",
     entryFee: "Free Entry",
-    image: "/images/hero-raghurajpur.jpg",
+    image: `${base}images/hero-raghurajpur.jpg`,
     description: "Located right next to our home village of Biragobindapur, Raghurajpur is an open-air living museum where every home is an artisan studio. Renowned for Pattachitra scroll painting, palm-leaf engraving (Talapatra Chitra), wooden toys, and Gotipua dance.",
     highlights: [
       "Direct interactions with Master Chitrakar artisans in their homes",
@@ -138,7 +140,7 @@ export const sightseeingSpots = [
     bestTime: "05:30 AM – 08:30 AM (Sunrise & Holy Dip)",
     duration: "1 - 2 Hours",
     entryFee: "₹20 for Blue Flag certified zone",
-    image: "/images/golden-beach.jpg",
+    image: `${base}images/golden-beach.jpg`,
     description: "One of India's few internationally certified Blue Flag beaches. Clean golden sands, safe bathing zones with lifeguards, water sports, and peaceful morning sunrise prayer spots overlooking the Bay of Bengal.",
     highlights: [
       "Pristine, clean sand with dedicated changing rooms and showers",
@@ -158,7 +160,7 @@ export const sightseeingSpots = [
     bestTime: "06:00 AM – 08:30 PM",
     duration: "1 Hour",
     entryFee: "Free Entry",
-    image: "/images/jagannath-temple.jpg",
+    image: `${base}images/jagannath-temple.jpg`,
     description: "Considered the birthplace of Lord Jagannath and site of the celestial Ashwamedha Yajna. During the world-famous annual Rath Yatra, the deities travel on their majestic chariots from the main temple to stay here for 9 days.",
     highlights: [
       "Serene garden temple setting adorned with Kalinga stone carvings",
@@ -169,3 +171,4 @@ export const sightseeingSpots = [
     tips: "A peaceful alternative for elderly pilgrims who find the main temple complex difficult to navigate."
   }
 ];
+

@@ -1,3 +1,5 @@
+const base = import.meta.env.BASE_URL || '/';
+
 export const galleryCategories = [
   "All",
   "Coastal Odisha",
@@ -12,7 +14,7 @@ export const galleryItems = [
     title: "Shree Jagannath Temple Bada Danda",
     category: "Temple & Coast",
     location: "Puri Dham",
-    image: "/images/hero-jagannath.jpg",
+    image: `${base}images/hero-jagannath.jpg`,
     description: "The magnificent 12th-century sanctum of Lord Jagannath along Grand Road in sacred Puri Dham."
   },
   {
@@ -20,7 +22,7 @@ export const galleryItems = [
     title: "Konark Sun Temple Sandstone Wheels",
     category: "Temple & Coast",
     location: "Konark",
-    image: "/images/hero-konark.jpg",
+    image: `${base}images/hero-konark.jpg`,
     description: "Intricately carved 13th-century stone sundials and celestial sculptures at the Black Pagoda."
   },
   {
@@ -28,7 +30,7 @@ export const galleryItems = [
     title: "Irrawaddy Dolphin Boat Cruise",
     category: "Coastal Odisha",
     location: "Chilika Lake (Satapada)",
-    image: "/images/hero-chilika.jpg",
+    image: `${base}images/hero-chilika.jpg`,
     description: "Serene morning boat cruise across Satapada waters spotting natural dolphin pods."
   },
   {
@@ -36,7 +38,7 @@ export const galleryItems = [
     title: "Lingaraj Temple Twilight Reflection",
     category: "Temple & Coast",
     location: "Old Town, Bhubaneswar",
-    image: "/images/hero-bhubaneswar.jpg",
+    image: `${base}images/hero-bhubaneswar.jpg`,
     description: "11th-century Somavamsi stone deula towering over the sacred waters of Bindusagar."
   },
   {
@@ -44,7 +46,7 @@ export const galleryItems = [
     title: "Raghurajpur Heritage Crafts Murals",
     category: "Pilgrimage & Landscapes",
     location: "Raghurajpur Heritage Village",
-    image: "/images/hero-raghurajpur.jpg",
+    image: `${base}images/hero-raghurajpur.jpg`,
     description: "Master artisan hand-painting sacred epic scrolls on traditional cloth and palm leaves."
   },
   {
@@ -52,7 +54,7 @@ export const galleryItems = [
     title: "Puri Blue Flag Golden Beach Sunrise",
     category: "Coastal Odisha",
     location: "Golden Beach, Puri",
-    image: "/images/golden-beach.jpg",
+    image: `${base}images/golden-beach.jpg`,
     description: "Early dawn prayer, sunrise, and sacred dip at the clean Blue Flag certified shore of Puri."
   },
   {
@@ -60,7 +62,7 @@ export const galleryItems = [
     title: "Our Clean AC Swift Dzire Fleet",
     category: "Our Fleet",
     location: "Biragobindapur Fleet Yard",
-    image: "/images/fleet-dzire.jpg",
+    image: `${base}images/fleet-dzire.jpg`,
     description: "Immaculately maintained, fully air-conditioned sedan ready for pilgrimage journeys."
   },
   {
@@ -68,7 +70,7 @@ export const galleryItems = [
     title: "Konark Sun Temple Complete View",
     category: "Temple & Coast",
     location: "Konark Heritage Complex",
-    image: "/images/konark-sun-temple.jpg",
+    image: `${base}images/konark-sun-temple.jpg`,
     description: "Full architectural panorama of the monumental UNESCO World Heritage chariot temple."
   },
   {
@@ -76,7 +78,7 @@ export const galleryItems = [
     title: "Sri Jagannath Temple Ancient Shikhara",
     category: "Temple & Coast",
     location: "Puri Dham",
-    image: "/images/jagannath-temple.jpg",
+    image: `${base}images/jagannath-temple.jpg`,
     description: "The 214-foot soaring stone spire crowned by the sacred Nilachakra and Patitapavana flag."
   },
   {
@@ -84,7 +86,7 @@ export const galleryItems = [
     title: "Master Pattachitra Painter Studio",
     category: "Pilgrimage & Landscapes",
     location: "Raghurajpur Crafts Village",
-    image: "/images/raghurajpur-art.jpg",
+    image: `${base}images/raghurajpur-art.jpg`,
     description: "Authentic living tradition of natural stone pigment grinding and delicate brushwork."
   },
   {
@@ -92,7 +94,7 @@ export const galleryItems = [
     title: "Chilika Calm Waters & Fishing Boats",
     category: "Coastal Odisha",
     location: "Satapada, Chilika",
-    image: "/images/chilika-lake.jpg",
+    image: `${base}images/chilika-lake.jpg`,
     description: "Quiet morning across Asia's largest brackish lagoon surrounded by migratory wetland birds."
   },
   {
@@ -100,7 +102,7 @@ export const galleryItems = [
     title: "Konark Chariot Wheel Hub & Spokes",
     category: "Temple & Coast",
     location: "Konark",
-    image: "/images/konark-wheel.jpg",
+    image: `${base}images/konark-wheel.jpg`,
     description: "Exquisite details of medallions depicting day-and-night activities carved in sandstone."
   }
 ];

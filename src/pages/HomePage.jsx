@@ -18,7 +18,7 @@ export default function HomePage({ onOpenInquiry }) {
       badge: "SACRED CHAR DHAM OF INDIA",
       headline: "ENDLESS DISCOVERY",
       subHeadline: "PURI DHAM • LORD JAGANNATH SANCTUM",
-      image: "/images/hero-jagannath.jpg",
+      image: `${import.meta.env.BASE_URL}images/hero-jagannath.jpg`,
       cardTitle: "PURI DHAM",
       cardDescription: "One of Hinduism's revered Char Dhams. Built in the 12th century, the Shree Jagannath Temple features the world's largest temple kitchen serving sacred Mahaprasad, the sacred Grand Road, and the Blue Flag Golden Beach.",
       routeTo: "/pilgrimage",
@@ -33,7 +33,7 @@ export default function HomePage({ onOpenInquiry }) {
       badge: "UNESCO WORLD HERITAGE SITE",
       headline: "TIMELESS ARCHITECTURE",
       subHeadline: "KONARK SUN TEMPLE • BLACK PAGODA",
-      image: "/images/hero-konark.jpg",
+      image: `${import.meta.env.BASE_URL}images/hero-konark.jpg`,
       cardTitle: "KONARK",
       cardDescription: "A monumental 13th-century stone chariot carved with 24 giant sundial wheels and celestial musicians. Connected to Puri via the breathtaking Marine Drive coastline along the Bay of Bengal.",
       routeTo: "/sightseeing",
@@ -48,7 +48,7 @@ export default function HomePage({ onOpenInquiry }) {
       badge: "ASIA'S LARGEST BRACKISH LAGOON",
       headline: "COASTAL SPLENDOR",
       subHeadline: "CHILIKA LAKE • SATAPADA DOLPHIN LAGOON",
-      image: "/images/hero-chilika.jpg",
+      image: `${import.meta.env.BASE_URL}images/hero-chilika.jpg`,
       cardTitle: "CHILIKA LAKE",
       cardDescription: "Satapada serves as the sanctuary of the rare Irrawaddy dolphins and thousands of winter migratory birds. Experience serene motorized boat rides to Rajahansa Island and the meeting point of lake and sea.",
       routeTo: "/packages",
@@ -63,7 +63,7 @@ export default function HomePage({ onOpenInquiry }) {
       badge: "CITY OF 500 ANCIENT TEMPLES",
       headline: "SPIRITUAL CAPITAL",
       subHeadline: "BHUBANESWAR • LINGARAJ & DHAULI",
-      image: "/images/hero-bhubaneswar.jpg",
+      image: `${import.meta.env.BASE_URL}images/hero-bhubaneswar.jpg`,
       cardTitle: "BHUBANESWAR",
       cardDescription: "Eastern India's temple city boasting Somavamsi stone carvings at Lingaraj and Mukteshwar, alongside the historic white Dhauli Shanti Stupa where Emperor Ashoka embraced universal peace.",
       routeTo: "/sightseeing",
@@ -78,7 +78,7 @@ export default function HomePage({ onOpenInquiry }) {
       badge: "LIVING ARTISAN HERITAGE HAMLET",
       headline: "LIVING HERITAGE",
       subHeadline: "RAGHURAJPUR • PATTACHITRA CRAFTS",
-      image: "/images/hero-raghurajpur.jpg",
+      image: `${import.meta.env.BASE_URL}images/hero-raghurajpur.jpg`,
       cardTitle: "RAGHURAJPUR",
       cardDescription: "Situated adjacent to our Biragobindapur hub, every house is an open-air art gallery. Witness master Chitrakars engraving palm leaves and painting mythological frescoes with natural stone pigments.",
       routeTo: "/packages",
@@ -310,11 +310,11 @@ export default function HomePage({ onOpenInquiry }) {
         <QuickBookingWidget onOpenInquiry={onOpenInquiry} />
       </section>
 
-      {/* 4 CORE TRUST VALUE PROPOSITIONS */}
-      <TrustBadges />
-
-      {/* 🌟 4 MAIN TOUR PACKAGES ON HOME PAGE (With "Book Cab Now" and "View All Vehicle Prices" as requested!) */}
+      {/* 🌟 4 MAIN TOUR PACKAGES ON HOME PAGE (Immediately following Quick Booking) */}
       <MainFourAttractions onOpenInquiry={onOpenInquiry} />
+
+      {/* 4 CORE TRUST VALUE PROPOSITIONS (Verified Cabs, Honest Fixed Fares, Desk Support, 0 Rushed Schedules) */}
+      <TrustBadges />
 
       {/* 🚀 OFFICIAL FIXED TARIFF RATE CARD */}
       <OfficialRateTable onOpenInquiry={onOpenInquiry} />
@@ -652,3 +652,4 @@ export default function HomePage({ onOpenInquiry }) {
     </div>
   );
 }
+

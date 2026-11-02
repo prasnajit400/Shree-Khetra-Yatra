@@ -47,3 +47,24 @@
   backdrop-filter: blur(12px);
 }
 
+/* Smooth continuous ticker for mobile info line */
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-smooth {
+  display: flex;
+  width: max-content;
+  animation: tickerMove 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-smooth:hover,
+.animate-marquee-smooth:active {
+  animation-play-state: paused;
+}
