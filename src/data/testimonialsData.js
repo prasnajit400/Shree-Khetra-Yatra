@@ -40,3 +40,4 @@ export const testimonials = [
     verified: true
   }
 ];
+

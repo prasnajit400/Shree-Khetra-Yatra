@@ -1,26 +1,26 @@
 export const packages = [
   {
     id: "puri-chilika-taxi",
-    title: "Puri to Chilika Lake Taxi",
+    title: "Puri to Chilika Lake Taxi Booking",
     subtitle: "Satapada Irrawaddy Dolphin Spotting & Sea Mouth Boat Ride Transfer",
     category: "Chilika Lake",
-    vehicleType: "Swift Dzire (AC)",
-    duration: "7 Hours",
+    vehicleType: "Dzire (₹2,200) • Ertiga (₹2,700) • Innova / Winger (₹4,000)",
+    duration: "80 Km / 8 Hrs",
     price: 2200,
     priceDisplay: "₹2,200",
     originalPrice: 2500,
-    pricingNote: "Fixed fare • Zero hidden costs",
+    pricingNote: "Official Tariff Card Rate • Extra: ₹12/km, ₹150/hr",
     featured: true,
     rating: 4.9,
     reviewsCount: 142,
-    badge: "Most Popular Pilgrimage & Nature Trip",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
-    overview: "Embark on a relaxed private day excursion from Puri to Satapada on the banks of Chilika Lake, Asia's largest brackish lagoon. Experience scenic coastal highway drives, Irrawaddy dolphin sightings, and Rajahansa Island boat transfer.",
+    badge: "Official Tariff Matched",
+    image: "/images/hero-chilika.jpg",
+    overview: "Embark on an 80 km / 8 hrs private day excursion from Puri to Satapada on the banks of Chilika Lake. Available in Swift Dzire (₹2,200), Ertiga (₹2,700), Innova Crysta (₹4,000), or 12-seater AC Winger (₹4,000).",
     inclusions: [
-      "AC Swift Dzire with dedicated native chauffeur",
+      "AC Vehicle of your choice with native courteous chauffeur",
+      "80 Km / 8 Hours inclusive running limit",
       "Doorstep pick-up & drop from your Puri hotel or Grand Road",
-      "Fuel, toll taxes, parking charges, and driver allowance",
-      "Boat ride coordination & counter ticketing assistance",
+      "Boat ride coordination & official OTDC ticketing counter assistance",
       "Unhurried halt at Satapada Chilika Tourism complex"
     ],
     exclusions: [
@@ -37,28 +37,136 @@ export const packages = [
     ]
   },
   {
+    id: "puri-konark-taxi",
+    title: "Puri to Konark Taxi Booking (5 Hrs Tour)",
+    subtitle: "Express Sun Temple Tour & Chandrabhaga Beach Visit",
+    category: "Konark Express",
+    vehicleType: "Dzire (₹1,699) • Ertiga (₹2,000) • Innova (₹3,500) • Winger (₹3,800)",
+    duration: "5 Hrs Tour",
+    price: 1699,
+    priceDisplay: "₹1,699",
+    originalPrice: 2000,
+    pricingNote: "Official Tariff Rate • Extra: ₹12/km, ₹150/hr",
+    featured: true,
+    rating: 4.8,
+    reviewsCount: 167,
+    badge: "Most Popular Half-Day Tour",
+    image: "/images/hero-konark.jpg",
+    overview: "Fast, punctual, and breathtaking ride along the renowned Marine Drive connecting Puri and Konark. Available in Dzire (₹1,699), Ertiga (₹2,000), Innova Crysta (₹3,500), or 12-seater AC Winger (₹3,800).",
+    inclusions: [
+      "Clean, sanitized AC Cab with polite local driver",
+      "5 Hours dedicated tour duration with ample monument waiting",
+      "Puri hotel pickup and drop-off",
+      "Marine Drive scenic coastal route drive & Chandrabhaga beach halt",
+      "All parking clearances and driver allowances included"
+    ],
+    exclusions: [
+      "Konark monument entrance fees (ASI)",
+      "Camera fees if applicable",
+      "Food and personal refreshments"
+    ],
+    itinerary: [
+      "Custom morning or afternoon pickup from Puri",
+      "35 km scenic drive alongside the Bay of Bengal coastline",
+      "Chandrabhaga Beach ocean breeze stop",
+      "Sun Temple sightseeing with ample vehicle waiting time",
+      "Safe and prompt return transfer to Puri"
+    ]
+  },
+  {
+    id: "puri-bhubaneswar-drop",
+    title: "Puri to Bhubaneswar Drop Taxi Fare",
+    subtitle: "Direct Airport (BBI), Station, or Hotel Transfer",
+    category: "Airport Transfer",
+    vehicleType: "Dzire (₹1,800) • Ertiga (₹2,000) • Innova (₹3,500) • Traveller (₹4,000)",
+    duration: "1.5 - 2 Hours",
+    price: 1800,
+    priceDisplay: "₹1,800",
+    originalPrice: 2100,
+    pricingNote: "One-Way Drop • 17+1 Traveller: ₹4,000",
+    featured: true,
+    rating: 4.9,
+    reviewsCount: 310,
+    badge: "Airport Express Drop",
+    image: "/images/fleet-dzire.jpg",
+    overview: "Point-to-point guaranteed private cab transfer from Puri to Biju Patnaik International Airport (BBI) or Bhubaneswar Railway Station. Dzire (₹1,800), Ertiga (₹2,000), Innova Crysta (₹3,500), or Force Traveller 17+1 (₹4,000).",
+    inclusions: [
+      "Direct smooth 60 km drive via NH-316 bypassing city traffic",
+      "Doorstep pick-up from Puri hotel, resort, or Grand Road",
+      "Luggage assistance and child/elderly passenger care",
+      "Zero flight delay surcharge with real-time flight monitoring",
+      "Highway toll charges included"
+    ],
+    exclusions: [
+      "En-route detour to temples outside the highway route (available upon request)"
+    ],
+    itinerary: [
+      "Chauffeur arrives at your Puri hotel 15 minutes before scheduled departure",
+      "Luggage stowed comfortably into air-conditioned vehicle",
+      "Direct express highway transit to Bhubaneswar",
+      "Drop at BBI Airport departures gate or Bhubaneswar station platform"
+    ]
+  },
+  {
+    id: "bhubaneswar-sightseeing-from-puri",
+    title: "Bhubaneswar Sightseeing from Puri",
+    subtitle: "Lingaraj Temple, Dhauli Peace Pagoda, Caves & City Circuit",
+    category: "Bhubaneswar Tour",
+    vehicleType: "Dzire (₹3,000) • Winger (₹4,000) • Innova Crysta (₹5,500)",
+    duration: "80 Km / 8 Hrs",
+    price: 3000,
+    priceDisplay: "₹3,000",
+    originalPrice: 3500,
+    pricingNote: "80 Km / 8 Hrs • Extra: ₹15-30/km",
+    featured: true,
+    rating: 4.9,
+    reviewsCount: 188,
+    badge: "Capital Heritage Circuit",
+    image: "/images/hero-bhubaneswar.jpg",
+    overview: "Comprehensive full-day city sightseeing covering ancient Kalinga architecture: 11th-century Lingaraj Temple, Dhauli Shanti Stupa, Udayagiri-Khandagiri Caves, and Nandankanan. Dzire (₹3,000), Winger 13+1 (₹4,000), Innova (₹5,500).",
+    inclusions: [
+      "Dedicated Full-Day AC Cab with veteran temple circuit driver",
+      "80 Km and 8 Hours inclusive running limit",
+      "Covers Dhauli Peace Pagoda, Lingaraj Temple precinct, Mukteshwar, Rajarani & Caves",
+      "Includes fuel, toll taxes, and vehicle parking clearances",
+      "Flexible halts for lunch and authentic Odia sweet tastings (Pahala Rasagola)"
+    ],
+    exclusions: [
+      "Monument entry tickets and cave passes",
+      "Meals and refreshments"
+    ],
+    itinerary: [
+      "08:00 AM: Departure from Puri hotel via NH-316",
+      "09:30 AM: Dhauli Shanti Stupa & Ashokan Rock Edicts",
+      "11:00 AM: Lingaraj Temple, Bindusagar & Mukteshwar Temple",
+      "01:30 PM: Authentic Odia Thali lunch break",
+      "03:00 PM: Udayagiri & Khandagiri Jain Caves exploration",
+      "05:30 PM: Return drive to Puri with evening drop"
+    ]
+  },
+  {
     id: "raghurajpur-crafts-tour",
     title: "Raghurajpur Crafts & Pattachitra Village Tour",
     subtitle: "Heritage Art & Living Crafts Village Excursion",
     category: "Heritage & Craft",
-    vehicleType: "Private Cab (AC)",
+    vehicleType: "Private Cab (AC) • 4+1 Seats",
     duration: "4 Hours",
     price: 1600,
     priceDisplay: "₹1,600",
     originalPrice: 1900,
     pricingNote: "Special Discounted Fare • 16% OFF",
-    featured: true,
+    featured: false,
     rating: 4.9,
     reviewsCount: 98,
     badge: "Heritage Cultural Excursion",
-    image: "https://images.unsplash.com/photo-1609137144822-491a13b6329c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hero-raghurajpur.jpg",
     overview: "Visit Raghurajpur, Odisha's celebrated heritage crafts village near Puri. Walk along painted murals, meet National Award-winning Chitrakars, and witness live Pattachitra palm-leaf engraving, Gotipua dance heritage, and stone carving.",
     inclusions: [
       "Private AC Cab (Swift Dzire / Etios) with courteous driver",
       "Doorstep pick-up and drop anywhere in Puri",
       "All toll, parking, and village entry clearances",
       "Direct artisan studio visits with no middleman commission pressure",
-      "Visit nearby Biragobindapur historic SASAN village landmarks"
+      "Visit nearby village coconut groves and rural riverside"
     ],
     exclusions: [
       "Personal purchases of authentic Pattachitra artwork",
@@ -70,7 +178,7 @@ export const packages = [
       "Direct drive through coconut groves and Bhargavi riverbank to Raghurajpur (14 km)",
       "Guided walk along the twin village streets admiring outdoor wall frescoes",
       "Interactive interaction with master artisans demonstrating natural pigment painting",
-      "Return journey with optional halt at Biragobindapur Sasan temple"
+      "Safe return drop at your hotel"
     ]
   },
   {
@@ -78,17 +186,17 @@ export const packages = [
     title: "Full-Day Golden Triangle Private Cab Tour",
     subtitle: "Puri + Konark + Bhubaneswar Complete Heritage Circuit",
     category: "Full Day Circuit",
-    vehicleType: "Private Cab (AC)",
+    vehicleType: "Private Cab (AC) • Dzire / Innova",
     duration: "8 Hours",
     price: 4499,
     priceDisplay: "₹4,499",
     originalPrice: 5200,
     pricingNote: "Comprehensive full-day excursion",
-    featured: true,
+    featured: false,
     rating: 5.0,
     reviewsCount: 215,
     badge: "Ultimate Odisha Odyssey",
-    image: "https://images.unsplash.com/photo-1628084666504-2ee178ebfefb?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hero-konark.jpg",
     overview: "The most iconic cultural journey in eastern India. Tour the spiritual sanctum of Puri Jagannath Dham, witness the 13th-century architectural grandeur of the Konark Sun Temple, and explore Bhubaneswar's Lingaraj & Dhauli Shanti Stupa.",
     inclusions: [
       "Dedicated Full-Day AC Sedan / SUV with veteran highway chauffeur",
@@ -110,114 +218,6 @@ export const packages = [
       "01:00 PM: Authentic Odia Thali lunch break",
       "02:30 PM - 05:00 PM: Lingaraj Temple outer precinct, Mukteshwar & Rajarani temples",
       "06:30 PM: Relaxed return drop at Puri hotel"
-    ]
-  },
-  {
-    id: "puri-konark-taxi",
-    title: "Puri to Konark Taxi Booking",
-    subtitle: "Express Sun Temple Tour & Chandrabhaga Beach Visit",
-    category: "Konark Express",
-    vehicleType: "Private Cab (AC)",
-    duration: "3 Hours",
-    price: 1500,
-    priceDisplay: "Contact Desk for Best Rates",
-    originalPrice: null,
-    pricingNote: "Starting from ₹1,500 • Instant Desk Dispatch",
-    featured: true,
-    rating: 4.8,
-    reviewsCount: 167,
-    badge: "Express Coastal Gateway",
-    image: "https://images.unsplash.com/photo-1600100397608-f010f4439c6e?auto=format&fit=crop&w=800&q=80",
-    overview: "Fast, punctual, and breathtaking ride along the renowned Marine Drive connecting Puri and Konark. Perfect for sunrise seekers, architecture enthusiasts, and pilgrims on a tight schedule.",
-    inclusions: [
-      "Clean, sanitized AC Cab (Dzire / Etios) with polite local driver",
-      "Puri hotel pickup and drop-off",
-      "Marine Drive scenic coastal route drive",
-      "Dedicated waiting time at Konark Sun Temple & Chandrabhaga beach",
-      "All toll, parking, and driver allowances included"
-    ],
-    exclusions: [
-      "Konark monument entrance fees (ASI)",
-      "Camera fees if applicable",
-      "Food and personal refreshments"
-    ],
-    itinerary: [
-      "Custom morning or afternoon pickup from Puri",
-      "35 km scenic drive alongside the Bay of Bengal coastline",
-      "Chandrabhaga Beach ocean breeze stop",
-      "Sun Temple sightseeing with ample vehicle waiting time",
-      "Safe and prompt return transfer to Puri"
-    ]
-  },
-  {
-    id: "bbi-airport-puri-transfer",
-    title: "Bhubaneswar Airport (BBI) to Puri Direct AC Transfer",
-    subtitle: "Flight-Tracking Meet & Greet with Direct Hotel Drop in Puri",
-    category: "Airport Transfer",
-    vehicleType: "Swift Dzire / Ertiga (AC)",
-    duration: "1.5 - 2 Hours",
-    price: 1800,
-    priceDisplay: "₹1,800",
-    originalPrice: 2100,
-    pricingNote: "Flight delay protection included",
-    featured: false,
-    rating: 4.9,
-    reviewsCount: 310,
-    badge: "Airport Express",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
-    overview: "Hassle-free, guaranteed direct private cab transfer from Biju Patnaik International Airport (BBI) or Bhubaneswar Railway Station straight to your Puri hotel, resort, or Grand Road ashram.",
-    inclusions: [
-      "Flight arrival monitoring with zero waiting surcharge for flight delays",
-      "Driver meet & greet right at Airport Terminal Arrival gate",
-      "Luggage assistance and child/elderly passenger care",
-      "Air-conditioned highway ride with experienced chauffeur",
-      "All national highway tolls and parking charges"
-    ],
-    exclusions: [
-      "En-route detour to temples outside the highway route (available upon request)"
-    ],
-    itinerary: [
-      "Chauffeur waits with name sign at BBI Airport arrival gate",
-      "Luggage stowed comfortably into air-conditioned vehicle",
-      "Direct smooth 60 km drive via NH-316 bypassing city traffic",
-      "Doorstep drop at your Puri accommodation"
-    ]
-  },
-  {
-    id: "puri-local-temple-beach",
-    title: "Puri Local Temple & Beach Sightseeing",
-    subtitle: "Gundicha Temple, Lokanath Dham, Narendra Sarovar & Golden Beach",
-    category: "Puri Local",
-    vehicleType: "Swift Dzire (AC)",
-    duration: "4.5 Hours",
-    price: 1400,
-    priceDisplay: "₹1,400",
-    originalPrice: 1650,
-    pricingNote: "Senior citizen friendly • Flexible halts",
-    featured: false,
-    rating: 4.9,
-    reviewsCount: 184,
-    badge: "Puri Darshan Special",
-    image: "https://images.unsplash.com/photo-1609137144822-491a13b6329c?auto=format&fit=crop&w=800&q=80",
-    overview: "Complete sacred tour of Puri's venerated shrines beyond the main temple. Visit Maa Gundicha Temple (Yajna Vedi), ancient Lokanath Shiva Temple, sacred water body Narendra Sarovar, and relax at the Blue Flag certified Golden Beach.",
-    inclusions: [
-      "AC Swift Dzire with veteran Puri native chauffeur",
-      "Complete coverage of Puri's prominent outer shrines",
-      "Assistance for elderly pilgrims with minimal walking routes",
-      "Waiting time at all temple gates and beach promenade",
-      "Parking, fuel, and driver charges included"
-    ],
-    exclusions: [
-      "Temple offerings, coconut, flower garlands",
-      "Panda guide dakshina"
-    ],
-    itinerary: [
-      "Pickup from hotel / residence in Puri",
-      "Visit Shree Gundicha Temple (Mausima Temple en route)",
-      "Darshan at the sub-aquatic Shiva Lingam of Lokanath Temple",
-      "Peaceful stop at Narendra Sarovar holy tank",
-      "Leisure stroll at Puri Blue Flag Golden Beach & Lighthouse",
-      "Drop back at hotel or Jagannath Temple Grand Road"
     ]
   }
 ];

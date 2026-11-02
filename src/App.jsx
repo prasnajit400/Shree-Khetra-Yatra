@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import InquiryModal from './components/InquiryModal';
 import HomePage from './pages/HomePage';
+import SightseeingPage from './pages/SightseeingPage';
+import PilgrimageGuidePage from './pages/PilgrimageGuidePage';
 import PackagesPage from './pages/PackagesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
@@ -34,16 +36,18 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 text-slate-800">
+    <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-black">
       <ScrollToTop />
       
-      {/* Sticky Header Navbar */}
+      {/* Sticky Header Navbar with 6 Tabs */}
       <Navbar onOpenInquiry={handleOpenInquiry} />
 
       {/* Main Multi-page Routes */}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<HomePage onOpenInquiry={handleOpenInquiry} />} />
+          <Route path="/sightseeing" element={<SightseeingPage onOpenInquiry={handleOpenInquiry} />} />
+          <Route path="/pilgrimage" element={<PilgrimageGuidePage onOpenInquiry={handleOpenInquiry} />} />
           <Route path="/packages" element={<PackagesPage onOpenInquiry={handleOpenInquiry} />} />
           <Route path="/gallery" element={<GalleryPage onOpenInquiry={handleOpenInquiry} />} />
           <Route path="/contact" element={<ContactPage />} />

@@ -126,3 +126,4 @@ export default function PackageCard({ pkg, onBook }) {
     </div>
   );
 }
+

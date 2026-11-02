@@ -67,3 +67,4 @@ export default function DestinationCard({ destination, onExplore }) {
     </div>
   );
 }
+
