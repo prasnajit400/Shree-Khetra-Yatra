@@ -11,12 +11,34 @@ import PackagesPage from './pages/PackagesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 
-// Scroll to top helper component on route change
+// Scroll to top helper component on route change (Guaranteed for mobile & desktop)
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Disable browser automatic scroll restoration so it never retains previous page offset
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Force instant scroll without animation so CSS smooth scroll does not get interrupted
+    document.documentElement.style.scrollBehavior = 'auto';
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    const root = document.getElementById('root');
+    if (root) root.scrollTop = 0;
+
+    // Follow-up after layout paint to guarantee top position across all mobile viewports
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+      if (root) root.scrollTop = 0;
+      document.documentElement.style.scrollBehavior = '';
+    }, 40);
+
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return null;

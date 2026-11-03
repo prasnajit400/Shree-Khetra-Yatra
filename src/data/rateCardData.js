@@ -47,7 +47,7 @@ export const officialRateCards = [
     durationDistance: "80 Km / 8 Hrs",
     routeDescription: "Satapada dolphin spotting, motorized boat boarding counter, Rajahansa Island transfer.",
     startingPrice: "₹2,200",
-    image: `${base}images/hero-chilika.jpg`,
+    image: `${base}images/banner-chilika-taxi.jpg`,
     badge: "Top Attraction #1",
     rates: [
       {
@@ -102,7 +102,7 @@ export const officialRateCards = [
     durationDistance: "5 Hrs Tour / Marine Drive",
     routeDescription: "Express Puri-Konark Marine Drive, Sun Temple architectural tour, Chandrabhaga beach breeze.",
     startingPrice: "₹1,699",
-    image: `${base}images/hero-konark.jpg`,
+    image: `${base}images/banner-konark-taxi.jpg`,
     badge: "Top Attraction #2",
     rates: [
       {
@@ -157,7 +157,7 @@ export const officialRateCards = [
     durationDistance: "One-Way / Point-to-Point Drop",
     routeDescription: "Direct highway drop to Bhubaneswar Airport (BBI), Master Canteen Station, or city hotels.",
     startingPrice: "₹1,800",
-    image: `${base}images/fleet-dzire.jpg`,
+    image: `${base}images/banner-bhubaneswar-drop.jpg`,
     badge: "Top Attraction #3",
     rates: [
       {
@@ -212,14 +212,14 @@ export const officialRateCards = [
     durationDistance: "80 Km / 8 Hrs",
     routeDescription: "Lingaraj Temple, Dhauli Shanti Stupa, Udayagiri-Khandagiri Caves & Nandankanan.",
     startingPrice: "₹3,000",
-    image: `${base}images/hero-bhubaneswar.jpg`,
+    image: `${base}images/banner-bhubaneswar-sightseeing.jpg`,
     badge: "Top Attraction #4",
     rates: [
       {
         vehicle: "AC Winger",
         seats: "13+1",
-        baseRate: 5500,
-        baseRateDisplay: "₹5,500.00",
+        baseRate: 4000,
+        baseRateDisplay: "₹4,000.00",
         extraHrs: "₹250.00",
         extraKm: "₹23.00",
         perKm: "₹23.00",
@@ -231,22 +231,11 @@ export const officialRateCards = [
         seats: "6+1",
         baseRate: 5500,
         baseRateDisplay: "₹5,500.00",
-        extraHrs: "₹350.00",
+        extraHrs: "₹150.00",
         extraKm: "₹30.00",
-        perKm: "₹30.00",
+        perKm: "₹22.00",
         image: `${base}images/fleet-innova.jpg`,
         description: "Ultimate luxury day tour with veteran temple circuit guide-driver."
-      },
-      {
-        vehicle: "AC Ertiga",
-        seats: "6+1",
-        baseRate: 3800,
-        baseRateDisplay: "₹3,800.00",
-        extraHrs: "₹200.00",
-        extraKm: "₹15.00",
-        perKm: "₹15.00",
-        image: `${base}images/fleet-ertiga.jpg`,
-        description: "Spacious 6-seater full-day sightseeing cab for temple lovers."
       },
       {
         vehicle: "AC Dzire",
@@ -254,7 +243,7 @@ export const officialRateCards = [
         baseRate: 3000,
         baseRateDisplay: "₹3,000.00",
         extraHrs: "₹250.00",
-        extraKm: "₹20.00",
+        extraKm: "₹15.00",
         perKm: "₹20.00",
         image: `${base}images/fleet-dzire.jpg`,
         description: "Complete full-day temple tour for couples or small families."

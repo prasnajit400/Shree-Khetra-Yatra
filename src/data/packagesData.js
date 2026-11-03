@@ -16,7 +16,7 @@ export const packages = [
     rating: 4.9,
     reviewsCount: 142,
     badge: "Official Tariff Matched",
-    image: `${base}images/hero-chilika.jpg`,
+    image: `${base}images/banner-chilika-taxi.jpg`,
     overview: "Embark on an 80 km / 8 hrs private day excursion from Puri to Satapada on the banks of Chilika Lake. Available in Swift Dzire (₹2,200), Ertiga (₹2,700), Innova Crysta (₹4,000), or 12-seater AC Winger (₹4,000).",
     inclusions: [
       "AC Vehicle of your choice with native courteous chauffeur",
@@ -53,7 +53,7 @@ export const packages = [
     rating: 4.8,
     reviewsCount: 167,
     badge: "Most Popular Half-Day Tour",
-    image: `${base}images/hero-konark.jpg`,
+    image: `${base}images/banner-konark-taxi.jpg`,
     overview: "Fast, punctual, and breathtaking ride along the renowned Marine Drive connecting Puri and Konark. Available in Dzire (₹1,699), Ertiga (₹2,000), Innova Crysta (₹3,500), or 12-seater AC Winger (₹3,800).",
     inclusions: [
       "Clean, sanitized AC Cab with polite local driver",
@@ -90,7 +90,7 @@ export const packages = [
     rating: 4.9,
     reviewsCount: 310,
     badge: "Airport Express Drop",
-    image: `${base}images/fleet-dzire.jpg`,
+    image: `${base}images/banner-bhubaneswar-drop.jpg`,
     overview: "Point-to-point guaranteed private cab transfer from Puri to Biju Patnaik International Airport (BBI) or Bhubaneswar Railway Station. Dzire (₹1,800), Ertiga (₹2,000), Innova Crysta (₹3,500), or Force Traveller 17+1 (₹4,000).",
     inclusions: [
       "Direct smooth 60 km drive via NH-316 bypassing city traffic",
@@ -124,7 +124,7 @@ export const packages = [
     rating: 4.9,
     reviewsCount: 188,
     badge: "Capital Heritage Circuit",
-    image: `${base}images/hero-bhubaneswar.jpg`,
+    image: `${base}images/banner-bhubaneswar-sightseeing.jpg`,
     overview: "Comprehensive full-day city sightseeing covering ancient Kalinga architecture: 11th-century Lingaraj Temple, Dhauli Shanti Stupa, Udayagiri-Khandagiri Caves, and Nandankanan. Dzire (₹3,000), Winger 13+1 (₹4,000), Innova (₹5,500).",
     inclusions: [
       "Dedicated Full-Day AC Cab with veteran temple circuit driver",
@@ -198,7 +198,7 @@ export const packages = [
     rating: 5.0,
     reviewsCount: 215,
     badge: "Ultimate Odisha Odyssey",
-    image: `${base}images/hero-konark.jpg`,
+    image: `${base}images/banner-konark-taxi.jpg`,
     overview: "The most iconic cultural journey in eastern India. Tour the spiritual sanctum of Puri Jagannath Dham, witness the 13th-century architectural grandeur of the Konark Sun Temple, and explore Bhubaneswar's Lingaraj & Dhauli Shanti Stupa.",
     inclusions: [
       "Dedicated Full-Day AC Sedan / SUV with veteran highway chauffeur",
@@ -223,3 +223,4 @@ export const packages = [
     ]
   }
 ];
+

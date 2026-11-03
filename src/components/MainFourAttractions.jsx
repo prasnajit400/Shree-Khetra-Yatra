@@ -6,94 +6,83 @@ export default function MainFourAttractions({ onOpenInquiry }) {
   const [selectedPriceModal, setSelectedPriceModal] = useState(null);
 
   return (
-    <section className="pt-16 pb-16 bg-slate-950 text-white">
+    <section className="pt-8 sm:pt-10 pb-14 bg-slate-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-2">
               <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Main Tourist Attractions of Puri</span>
+              <span>Official Tariff Packages</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-black font-heading text-white tracking-tight">
               Top 4 Sightseeing & Cab Packages
             </h2>
-            <p className="mt-2 text-sm text-slate-400 max-w-2xl">
-              The four foundational coastal circuits every pilgrim and traveler visits. Choose your destination, compare transparent fleet pricing, and reserve instantly.
+            <p className="mt-1 text-sm text-slate-400 max-w-2xl">
+              Verified coastal circuits departing directly from Puri. Fixed honest fares, vetted drivers, and unhurried halts.
             </p>
           </div>
 
           <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-3.5 py-2 rounded-xl shrink-0">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>100% Fixed Rates • All Vehicles Sanitized</span>
+            <span>100% Fixed Rates • Toll & Parking Included</span>
           </div>
         </div>
 
-        {/* 4 Main Attraction Cards Grid (Different, distinctive futuristic design) */}
+        {/* 4 Main Attraction Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {officialRateCards.map((card, idx) => (
+          {officialRateCards.map((card) => (
             <div
               key={card.id}
-              className="bg-slate-900/90 rounded-3xl border border-slate-800 hover:border-cyan-500/50 shadow-xl hover:shadow-[0_0_35px_rgba(6,182,212,0.18)] transition-all duration-300 flex flex-col justify-between overflow-hidden group hover:-translate-y-1.5"
+              className="bg-slate-900/90 rounded-2xl border border-slate-800 hover:border-cyan-500/50 shadow-xl hover:shadow-[0_0_30px_rgba(6,182,212,0.18)] transition-all duration-300 flex flex-col justify-between overflow-hidden group hover:-translate-y-1"
             >
               <div>
-                {/* Photo & Badge */}
-                <div className="relative h-52 overflow-hidden bg-slate-950">
+                {/* 100% Crisp Graphic Banner (No dark overlay gradient, exact 3:2 aspect ratio matching user's banner) */}
+                <div className="relative aspect-[3/2] w-full overflow-hidden bg-slate-950">
                   <img
                     src={card.image}
                     alt={card.categoryTitle}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                </div>
 
-                  {/* Top Badges */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-cyan-500 text-black shadow-md">
+                {/* Card Body - Free of extra route descriptions as requested */}
+                <div className="p-4 sm:p-5 space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="px-2.5 py-0.5 rounded-md text-[10px] font-black uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                       {card.badge}
                     </span>
-                    <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-black/60 backdrop-blur-md text-amber-300 border border-white/10">
+                    <span className="text-[11px] font-bold text-amber-300 bg-amber-950/40 border border-amber-800/40 px-2 py-0.5 rounded-md">
                       {card.durationDistance}
                     </span>
                   </div>
 
-                  {/* Bottom Price Tag */}
-                  <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
-                    <div>
-                      <span className="text-[10px] text-slate-300 uppercase tracking-widest block font-bold">
-                        Starts From
-                      </span>
-                      <span className="text-2xl font-black text-amber-300 font-heading drop-shadow-md">
-                        {card.startingPrice}
-                      </span>
-                    </div>
-                    <span className="text-[10px] text-cyan-300 bg-black/70 px-2 py-0.5 rounded-md border border-cyan-500/30">
-                      Dzire to Traveller
-                    </span>
-                  </div>
-                </div>
-
-                {/* Card Body */}
-                <div className="p-5 space-y-3.5">
-                  <h3 className="text-lg font-bold font-heading text-white group-hover:text-cyan-300 transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold font-heading text-white group-hover:text-cyan-300 transition-colors leading-snug">
                     {card.categoryTitle}
                   </h3>
 
-                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-2">
-                    {card.routeDescription}
-                  </p>
+                  {/* Starting Fare */}
+                  <div className="flex items-baseline justify-between pt-1 border-t border-slate-800/80">
+                    <span className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">
+                      Base Fare Starts:
+                    </span>
+                    <span className="text-xl sm:text-2xl font-black text-amber-300 font-heading">
+                      {card.startingPrice}
+                    </span>
+                  </div>
 
-                  {/* Vehicles Included Preview */}
-                  <div className="pt-2 border-t border-slate-800">
+                  {/* Available Fleet Pills */}
+                  <div className="pt-2 border-t border-slate-800/80">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
                       Available Fleet:
                     </span>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-1">
                       {card.rates.map((v, i) => (
                         <span
                           key={i}
-                          className="px-2 py-0.5 rounded-lg bg-slate-950 border border-slate-800 text-[10px] text-slate-300 font-medium"
+                          className="px-2 py-0.5 rounded-md bg-slate-950 border border-slate-800 text-[10px] text-slate-300 font-medium"
                         >
                           {v.vehicle}
                         </span>
@@ -103,22 +92,20 @@ export default function MainFourAttractions({ onOpenInquiry }) {
                 </div>
               </div>
 
-              {/* 2 DISTINCT ACTION BUTTONS (As requested: "Book Now" and "View All Price") */}
-              <div className="p-5 pt-0 space-y-2">
-                {/* Button 1: Book Now */}
+              {/* 2 Action Buttons: "Book Cab Now" & "View All Vehicle Prices" */}
+              <div className="p-4 sm:p-5 pt-0 space-y-2">
                 <button
                   onClick={() => onOpenInquiry(`Booking for ${card.categoryTitle} (${card.startingPrice})`)}
-                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-400 text-black font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-98"
+                  className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-400 text-black font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-98"
                 >
                   <Car className="w-4 h-4 text-black" />
                   <span>Book Cab Now</span>
                   <ArrowRight className="w-3.5 h-3.5 text-black" />
                 </button>
 
-                {/* Button 2: View All Price */}
                 <button
                   onClick={() => setSelectedPriceModal(card)}
-                  className="w-full py-2.5 px-4 rounded-xl bg-slate-950 hover:bg-slate-800 text-cyan-300 hover:text-white border border-slate-700 font-bold text-xs transition-colors flex items-center justify-center gap-2 group-hover:border-cyan-500/40"
+                  className="w-full py-2 px-4 rounded-xl bg-slate-950 hover:bg-slate-800 text-cyan-300 hover:text-white border border-slate-700 font-bold text-xs transition-colors flex items-center justify-center gap-2 group-hover:border-cyan-500/40"
                 >
                   <Eye className="w-3.5 h-3.5 text-cyan-400" />
                   <span>View All Vehicle Prices</span>
@@ -130,7 +117,7 @@ export default function MainFourAttractions({ onOpenInquiry }) {
 
       </div>
 
-      {/* 🚀 DEDICATED FULL VEHICLE PRICING & TERMS MODAL (Launched by "View All Price") */}
+      {/* 🚀 DEDICATED FULL VEHICLE PRICING & TERMS MODAL (Launched by "View All Vehicle Prices") */}
       {selectedPriceModal && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl animate-fadeIn"
@@ -150,7 +137,7 @@ export default function MainFourAttractions({ onOpenInquiry }) {
                   {selectedPriceModal.categoryTitle}
                 </h3>
                 <p className="text-xs text-slate-400 mt-0.5">
-                  Standard Limits: <strong className="text-amber-300">{selectedPriceModal.durationDistance}</strong> • {selectedPriceModal.routeDescription}
+                  Standard Limits: <strong className="text-amber-300">{selectedPriceModal.durationDistance}</strong>
                 </p>
               </div>
 
@@ -216,7 +203,7 @@ export default function MainFourAttractions({ onOpenInquiry }) {
                 </table>
               </div>
 
-              {/* Complete Terms & Conditions (From user's screenshot!) */}
+              {/* Complete Terms & Conditions */}
               <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-4">
                 <div className="flex items-center gap-2 text-cyan-400 font-bold text-xs uppercase tracking-wider">
                   <FileText className="w-4 h-4" />
@@ -257,4 +244,3 @@ export default function MainFourAttractions({ onOpenInquiry }) {
     </section>
   );
 }
-

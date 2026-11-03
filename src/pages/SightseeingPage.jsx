@@ -129,12 +129,6 @@ export default function SightseeingPage({ onOpenInquiry }) {
                       </span>
                       <span className="text-slate-200 font-medium">{spot.duration}</span>
                     </div>
-                    <div className="col-span-2 pt-1 border-t border-slate-800/80">
-                      <span className="text-slate-500 block text-[10px] uppercase font-bold tracking-wider">
-                        Entry / Ticket:
-                      </span>
-                      <span className="text-amber-300 font-medium">{spot.entryFee}</span>
-                    </div>
                   </div>
 
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">

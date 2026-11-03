@@ -134,6 +134,12 @@ export default function Navbar({ onOpenInquiry }) {
                 <NavLink
                   key={link.path}
                   to={link.path}
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                    document.documentElement.scrollTop = 0;
+                    document.body.scrollTop = 0;
+                  }}
                   className={({ isActive }) =>
                     `px-4 py-2.5 rounded-xl text-sm font-bold flex items-center justify-between transition-colors ${
                       isActive
