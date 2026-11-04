@@ -178,7 +178,7 @@ export const odishaDestinations = [
     distance: "Keonjhar District (200 km from Puri)",
     idealDuration: "Full Day Tour",
     bestSeason: "Throughout the year (Chaiti Parba in April)",
-    image: `${base}images/hero-jagannath.jpg`,
+    image: `${base}images/ghatagaon-tarini.jpg`,
     summary: "Famous wish-fulfilling shrine in Keonjhar nestled amidst deep sal forests. Renowned across Eastern India for the unbroken custom of devotees offering fresh green coconuts.",
     description: "Maa Tarini at Ghatagaon is one of the most revered Shakti deities of Odisha. Millions of devotees believe that no journey through Odisha is complete without paying homage to Maa Tarini. Devotees from distant cities send coconuts by bus or private cab to be offered at her holy altar.",
     highlights: [
@@ -198,7 +198,7 @@ export const odishaDestinations = [
     distance: "20 km from Puri (on NH-316 Highway)",
     idealDuration: "1 to 2 Hours (En-route stop)",
     bestSeason: "Round the year",
-    image: `${base}images/raghurajpur-art.jpg`,
+    image: `${base}images/pipili-applique.jpg`,
     summary: "The world-famous artisan town that crafts the ceremonial cloth canopies, umbrellas, and coverings for the sacred chariots of Lord Jagannath during the Puri Ratha Yatra.",
     description: "Strategically located on the main highway linking Puri and Bhubaneswar, Pipili is renowned for Chandua (traditional applique embroidery). Master tailors stitch cut-out cloth designs of elephants, peacocks, flowers, and sacred deities onto contrasting fabrics with sparkling mirrors.",
     highlights: [
@@ -218,7 +218,7 @@ export const odishaDestinations = [
     distance: "115 km from Puri / Bhubaneswar (Fatehgarh, Nayagarh)",
     idealDuration: "Full Day Tour",
     bestSeason: "October to March",
-    image: `${base}images/lingaraj-temple.jpg`,
+    image: `${base}images/ram-mandir-fatehgarh.jpg`,
     summary: "A magnificent newly consecrated 73-ft high stone temple perched 1,800 feet atop Fatehgarh hill, hailed as the 'Ayodhya of Odisha' with sweeping views of the Mahanadi basin.",
     description: "Built entirely of hand-carved Baulamala stone adhering to classical Kalinga architectural canons, the Sri Ram Mandir atop Fatehgarh Hill has become one of Odisha's newest pilgrimage sensations. A scenic 4.5 km serpentine ghat road climbs up through the hills to this awe-inspiring summit.",
     highlights: [
@@ -238,7 +238,7 @@ export const odishaDestinations = [
     distance: "Satakosia (180 km) / Bhitarkanika (160 km)",
     idealDuration: "2 Days / 1 Night Circuit",
     bestSeason: "November to March",
-    image: `${base}images/chilika-lake.jpg`,
+    image: `${base}images/wildlife-bhitarkanika.jpg`,
     summary: "Odisha's premier wildlife wonders: the 22-km dramatic Satakosia river gorge on the Mahanadi, and the UNESCO wetland mangrove maze of Bhitarkanika teeming with giant saltwater crocodiles.",
     description: "Experience Odisha's wild side. At Satakosia, the majestic Mahanadi cuts through a sheer 22-km gorge surrounded by tiger reserve hills and sandbar eco-tents. At Bhitarkanika, silent boat safaris glide through dense mangrove creeks to witness 20-foot saltwater crocodiles, kingfishers, and spotted deer.",
     highlights: [
