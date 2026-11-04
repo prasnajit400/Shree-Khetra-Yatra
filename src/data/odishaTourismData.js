@@ -212,7 +212,7 @@ export const odishaDestinations = [
   },
   {
     id: "ram-temple-fatehgarh",
-    title: "Ram Temple Fatehgarh Nayagarh",
+    title: "Ram Temple, Fatehgarh, Nayagarh",
     category: "Sacred Temples & Shrines",
     tag: "Hilltop Ayodhya-Style Mandir",
     distance: "115 km from Puri / Bhubaneswar (Fatehgarh, Nayagarh)",
