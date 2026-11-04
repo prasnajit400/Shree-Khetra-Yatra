@@ -10,7 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-# Cancel any previous runs so the deployment lock is never blocked
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -21,7 +20,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -52,5 +50,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 120000
