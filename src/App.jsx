@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
 import InquiryModal from './components/InquiryModal';
 import HomePage from './pages/HomePage';
 import SightseeingPage from './pages/SightseeingPage';
-import PilgrimageGuidePage from './pages/PilgrimageGuidePage';
+import OdishaTourismPage from './pages/OdishaTourismPage';
 import PackagesPage from './pages/PackagesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
@@ -69,7 +69,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage onOpenInquiry={handleOpenInquiry} />} />
           <Route path="/sightseeing" element={<SightseeingPage onOpenInquiry={handleOpenInquiry} />} />
-          <Route path="/pilgrimage" element={<PilgrimageGuidePage onOpenInquiry={handleOpenInquiry} />} />
+          <Route path="/odisha-tourism" element={<OdishaTourismPage onOpenInquiry={handleOpenInquiry} />} />
+          {/* Legacy redirect */}
+          <Route path="/pilgrimage" element={<Navigate to="/odisha-tourism" replace />} />
           <Route path="/packages" element={<PackagesPage onOpenInquiry={handleOpenInquiry} />} />
           <Route path="/gallery" element={<GalleryPage onOpenInquiry={handleOpenInquiry} />} />
           <Route path="/contact" element={<ContactPage />} />
@@ -84,11 +86,11 @@ export default function App() {
       {/* Floating Call & WhatsApp Buttons */}
       <FloatingActions onOpenInquiry={handleOpenInquiry} />
 
-      {/* Global Interactive Lead & Booking Modal */}
+      {/* Booking / Inquiry Modal */}
       <InquiryModal
         isOpen={modalOpen}
         onClose={handleCloseModal}
-        initialPackage={selectedPackage}
+        preselectedPackage={selectedPackage}
       />
     </div>
   );

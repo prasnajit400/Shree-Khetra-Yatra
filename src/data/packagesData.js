@@ -100,19 +100,19 @@ export const packages = [
       "Highway toll charges included"
     ],
     exclusions: [
-      "En-route detour to temples outside the highway route (available upon request)"
+      "Multi-point city detours outside designated drop destination",
+      "Parking charges at destination if private pick-up applies"
     ],
     itinerary: [
-      "Chauffeur arrives at your Puri hotel 15 minutes before scheduled departure",
-      "Luggage stowed comfortably into air-conditioned vehicle",
-      "Direct express highway transit to Bhubaneswar",
-      "Drop at BBI Airport departures gate or Bhubaneswar station platform"
+      "Punctual doorstep pickup from your Puri hotel or residence",
+      "Smooth 60 km drive via NH-316 bypassing city traffic",
+      "Direct drop at BBI Departure Terminal or Railway Station Platform Gate"
     ]
   },
   {
-    id: "bhubaneswar-sightseeing-from-puri",
-    title: "Bhubaneswar Sightseeing from Puri",
-    subtitle: "Lingaraj Temple, Dhauli Peace Pagoda, Caves & City Circuit",
+    id: "bhubaneswar-sightseeing-tour",
+    title: "Bhubaneswar Sightseeing from Puri (80 Km / 8 Hrs)",
+    subtitle: "Lingaraj Temple, Dhauli Shanti Stupa, Khandagiri & Nandankanan",
     category: "Bhubaneswar Tour",
     vehicleType: "Dzire (₹3,000) • Winger (₹4,000) • Innova Crysta (₹5,500)",
     duration: "80 Km / 8 Hrs",
@@ -146,6 +146,156 @@ export const packages = [
       "05:30 PM: Return drive to Puri with evening drop"
     ]
   },
+
+  /* 🚀 4 NEW TOUR PACKAGES ADDED AS REQUESTED BY USER (With Direct Client Pricing Discussion) */
+  {
+    id: "koraput-tour-package",
+    title: "Koraput Tour Package (2 Night / 3 Days)",
+    subtitle: "Deomali Hills, Duduma Waterfall, Gupteswar Cave & Tribal Odyssey",
+    category: "Koraput Tour",
+    vehicleType: "AC Sedan • Ertiga • Innova Crysta • Traveller",
+    duration: "2 Nights / 3 Days",
+    price: 0,
+    priceDisplay: "Discuss with Desk",
+    originalPrice: null,
+    pricingNote: "Direct Desk Quote",
+    isCustomPrice: true,
+    featured: true,
+    rating: 4.9,
+    reviewsCount: 88,
+    badge: "2 Night / 3 Days Special",
+    image: `${base}images/banner-koraput.jpg`,
+    overview: "Experience the mesmerizing mountain beauty and rich tribal heritage of southern Odisha with our 2 Night / 3 Days Koraput Tour. Covers Koraput Local Sightseeing, Sabara Srikhetra Jagannath Temple, Tribal Museum, the majestic Duduma Waterfall (Machkund), Odisha's highest mountain peak at Deomali Hill Range, sacred Gupteswar Cave, Balda Caves, and Kolab Reservoir.",
+    inclusions: [
+      "Dedicated private AC Cab for entire 3-day circuit with veteran mountain chauffeur",
+      "Doorstep pickup & drop from Puri or Bhubaneswar",
+      "Full sightseeing of Deomali Hills, Duduma Falls, Gupteswar & Balda Caves",
+      "Driver night halt allowances, highway toll taxes, and parking clearances included",
+      "Customized pacing with hotel stay & local dining coordination"
+    ],
+    exclusions: [
+      "Hotel / resort accommodation charges (can be arranged on request)",
+      "Meals, snacks & personal expenses",
+      "Any entry / boating tickets at Kolab reservoir or waterfalls"
+    ],
+    itinerary: [
+      "Day 1: Departure from Puri / Bhubaneswar -> Scenic Eastern Ghats drive to Koraput -> Sabara Srikhetra Jagannath Temple & Tribal Museum -> Night halt in Koraput",
+      "Day 2: Early morning excursion to Deomali Hill Range (Highest peak of Odisha, 1,672 m) -> Duduma Waterfall (Machkund) -> Kolab Reservoir & Botanical Garden -> Night halt",
+      "Day 3: Sacred Gupteswar Shiva Cave -> Balda Caves & rolling green plateau -> Comfortable return highway journey"
+    ]
+  },
+  {
+    id: "daringbadi-tour-package",
+    title: "Daringbadi Tour Package (The Kashmir of Odisha)",
+    subtitle: "Misty Pine Forests, Coffee Gardens, Midubanda Falls & Hill Valleys",
+    category: "Daringbadi",
+    vehicleType: "Private AC Cab • Sedan / SUV / Traveller",
+    duration: "2 Days / 1 Night (or 3 Days)",
+    price: 0,
+    priceDisplay: "Discuss with Desk",
+    originalPrice: null,
+    pricingNote: "Direct Desk Quote",
+    isCustomPrice: true,
+    featured: true,
+    rating: 4.9,
+    reviewsCount: 94,
+    badge: "Hill Station Special",
+    image: `${base}images/banner-daringbadi.jpg`,
+    overview: "Escape to Daringbadi, famously known as the Kashmir of Odisha, perched at an altitude of 3,000 ft amid misty pine hills, fragrant coffee and black pepper plantations, and whispering valleys. Enjoy refreshing cool mountain breezes, Midubanda Waterfall, Lover's Point, Hill View Point, and eco-parks.",
+    inclusions: [
+      "Dedicated private AC cab with experienced hill & ghat section chauffeur",
+      "Doorstep pickup and return drop at Puri / Bhubaneswar",
+      "Daringbadi local sightseeing: Pine Jungle, Coffee & Pepper plantations, Midubanda Falls, Lover's Point, Hill View Point & Emu farm",
+      "All fuel, highway tolls, parking passes, and driver night allowances included",
+      "Unhurried schedule for families, couples, and nature lovers"
+    ],
+    exclusions: [
+      "Hotel / Eco-retreat stay charges (can be arranged as per package choice)",
+      "Meals and refreshments",
+      "Optional adventure park activities"
+    ],
+    itinerary: [
+      "Day 1: Morning departure from Puri -> Scenic drive through Ganjam ghats -> Daringbadi arrival -> Check-in -> Pine forest walk & sunset from Hill View Point -> Overnight stay",
+      "Day 2: Morning visit to Coffee & Spice plantations -> Midubanda Waterfall -> Lover's Point -> Emu bird sanctuary -> Afternoon scenic return drive to Puri"
+    ]
+  },
+  {
+    id: "tara-tarini-tour-package",
+    title: "Puri to Maa Tara Tarini Temple Tour Package",
+    subtitle: "Full Day Spiritual Pilgrimage to Revered Hilltop Adi Shakti Peeth",
+    category: "Maa Tara Tarini",
+    vehicleType: "AC Dzire • Ertiga • Innova Crysta • Winger",
+    duration: "Full Day Tour",
+    price: 0,
+    priceDisplay: "Discuss with Desk",
+    originalPrice: null,
+    pricingNote: "Custom All-Inclusive Fare",
+    isCustomPrice: true,
+    featured: true,
+    rating: 5.0,
+    reviewsCount: 112,
+    badge: "Hilltop Shakti Peeth",
+    image: `${base}images/banner-tara-tarini.jpg`,
+    overview: "Embark on an auspicious full-day pilgrimage from Puri to the ancient Maa Tara Tarini Temple, situated atop Kumari Hills on the sacred banks of the Rushikulya River in Ganjam. Ascend via modern ropeway cable car or the 999 holy steps, offer prayers at one of India's four primary Adi Shakti Peethas, and return comfortably with evening darshan at Shree Jagannath Temple.",
+    inclusions: [
+      "Dedicated sanitized AC Cab with respectful native chauffeur",
+      "Doorstep hotel pickup and return drop anywhere in Puri",
+      "Full-day tour with ample vehicle waiting time at hilltop temple complex",
+      "Scenic hill road drive, 999 steps / modern ropeway boarding assistance",
+      "All highway toll taxes, parking fees, and driver allowances included"
+    ],
+    exclusions: [
+      "Ropeway ticket fees / special puja coupons",
+      "Personal temple offerings and priest honorarium",
+      "Food and personal refreshments"
+    ],
+    itinerary: [
+      "06:30 AM: Doorstep morning pickup from Puri hotel",
+      "09:30 AM: Scenic coastal highway drive arriving at Kumari Hills, Purushottampur",
+      "10:00 AM - 01:30 PM: Ropeway / 999 steps ascent, sanctum darshan of Twin Goddesses Tara and Tarini, prasad & arati",
+      "02:00 PM: Traditional lunch break near Rushikulya river",
+      "03:30 PM: Relaxed return journey to Puri with evening darshan view of Shree Jagannath Temple"
+    ]
+  },
+  {
+    id: "kalijai-tour-package",
+    title: "Puri to Maa Kalijai Temple & Chilika Island Tour",
+    subtitle: "Full Day Lagoon Drive, Scenic Boat Cruise & Island Shrine Darshan",
+    category: "Maa Kalijai",
+    vehicleType: "AC Dzire • Ertiga • Innova Crysta • Winger",
+    duration: "Full Day Tour",
+    price: 0,
+    priceDisplay: "Discuss with Desk",
+    originalPrice: null,
+    pricingNote: "Custom All-Inclusive Fare",
+    isCustomPrice: true,
+    featured: true,
+    rating: 4.9,
+    reviewsCount: 104,
+    badge: "Chilika Island Temple",
+    image: `${base}images/banner-kalijai.jpg`,
+    overview: "A blissful full-day spiritual journey from Puri to the revered island sanctum of Maa Kalijai in Chilika Lake. Dedicated to the presiding goddess of the lagoon who protects all boatmen, pilgrims, and coastal travelers. Combines smooth highway cab transit from Puri, scenic motorized boat ride to Kalijai Island, divine temple puja, and evening darshan at Shree Jagannath Temple.",
+    inclusions: [
+      "Private AC Cab of your choice with polite courteous driver",
+      "Doorstep pickup & drop from your Puri hotel or Grand Road",
+      "Scenic highway drive through historic coastal Odisha to Chilika boat boarding counter",
+      "Boat ride coordination & assistance for crossing to Kalijai Island",
+      "All highway tolls, vehicle parking clearances, and driver allowances included"
+    ],
+    exclusions: [
+      "Motorized boat hire charges to Kalijai Island",
+      "Personal temple puja items and offerings",
+      "Meals and refreshments at island halts"
+    ],
+    itinerary: [
+      "07:30 AM: Morning pickup from Puri hotel",
+      "09:30 AM: Highway drive reaching Chilika boat jetty (Balugaon / Barkul)",
+      "10:00 AM - 01:30 PM: Scenic boat ride across the blue expanse of Chilika Lake to Kalijai Island -> Maa Kalijai Darshan & temple blessings",
+      "02:00 PM: Fresh coastal lunch halt",
+      "04:30 PM: Safe return drive to Puri with evening Shree Jagannath Temple darshan"
+    ]
+  },
+
   {
     id: "raghurajpur-crafts-tour",
     title: "Raghurajpur Crafts & Pattachitra Village Tour",
@@ -223,4 +373,3 @@ export const packages = [
     ]
   }
 ];
-

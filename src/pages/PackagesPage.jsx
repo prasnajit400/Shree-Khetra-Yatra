@@ -14,6 +14,10 @@ export default function PackagesPage({ onOpenInquiry }) {
     'Konark Express',
     'Airport Transfer',
     'Bhubaneswar Tour',
+    'Koraput Tour',
+    'Daringbadi',
+    'Maa Tara Tarini',
+    'Maa Kalijai',
     'Heritage & Craft',
     'Full Day Circuit'
   ];
@@ -29,7 +33,11 @@ export default function PackagesPage({ onOpenInquiry }) {
 
     // Sort
     if (sortBy === 'price-low') {
-      result.sort((a, b) => a.price - b.price);
+      result.sort((a, b) => {
+        if (a.price === 0) return 1;
+        if (b.price === 0) return -1;
+        return a.price - b.price;
+      });
     } else if (sortBy === 'price-high') {
       result.sort((a, b) => b.price - a.price);
     } else if (sortBy === 'duration') {
@@ -46,14 +54,14 @@ export default function PackagesPage({ onOpenInquiry }) {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-bold border border-cyan-500/30 mb-4">
             <Car className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Official Fixed Fare Tariff • Zero Price Surges</span>
+            <span>Official Fixed Fare Tariff & Tailored Tour Circuits</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight">
             Pilgrimage & Cab Tour Packages
           </h1>
           <p className="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
-            Choose from carefully curated, unhurried pilgrimage circuits and coastal excursions departing from Puri. Fully matched with our verified tariff card.
+            Choose from carefully curated, unhurried pilgrimage circuits, coastal excursions, and scenic hill station tours across Odisha.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-amber-300 font-semibold">
@@ -63,17 +71,17 @@ export default function PackagesPage({ onOpenInquiry }) {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Dzire • Ertiga • Innova Crysta • Winger • Force Traveller
+              Dzire • Ertiga • Innova Crysta • Winger • Traveller
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              Senior Citizen Priority Care
+              Direct Custom Quote on Discussion
             </span>
           </div>
         </div>
       </section>
 
-      {/* 🚀 OFFICIAL TARIFF & RATE CARD SECTION (Matched directly with user's price chart screenshot!) */}
+      {/* 🚀 OFFICIAL TARIFF & RATE CARD SECTION */}
       <OfficialRateTable onOpenInquiry={onOpenInquiry} />
 
       {/* Filter and Sorting Controls */}
@@ -88,7 +96,7 @@ export default function PackagesPage({ onOpenInquiry }) {
             </h3>
           </div>
           <span className="text-xs text-slate-400 hidden sm:inline">
-            Click "Book / Inquiry" to reserve instantly
+            Click "Book / Inquiry" or "WhatsApp" to discuss custom pricing
           </span>
         </div>
 
@@ -101,10 +109,10 @@ export default function PackagesPage({ onOpenInquiry }) {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-black shadow-md font-bold'
-                    : 'bg-slate-950 text-slate-300 hover:bg-slate-800 border border-slate-800'
+                    ? 'bg-amber-400 text-black shadow-md'
+                    : 'bg-slate-950 text-slate-300 hover:text-white border border-slate-800'
                 }`}
               >
                 {cat}
@@ -113,36 +121,23 @@ export default function PackagesPage({ onOpenInquiry }) {
           </div>
 
           {/* Sort Dropdown */}
-          <div className="flex items-center gap-2 shrink-0 self-end md:self-auto">
+          <div className="flex items-center gap-2 self-end md:self-auto shrink-0">
             <ArrowUpDown className="w-4 h-4 text-slate-400" />
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-              Sort By:
-            </span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-3 py-1.5 rounded-xl border border-slate-700 text-xs sm:text-sm font-medium bg-slate-950 text-white outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 cursor-pointer"
+              className="bg-slate-950 border border-slate-800 text-xs rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-400"
             >
-              <option value="default">Default Recommended</option>
+              <option value="default">Sort by: Default</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
-              <option value="duration">Duration: Short to Long</option>
+              <option value="duration">Duration</option>
             </select>
           </div>
         </div>
 
-        {/* Results Counter */}
-        <div className="mt-4 flex items-center justify-between text-xs text-slate-400 px-1">
-          <span>
-            Showing <strong className="text-white">{filteredAndSortedPackages.length}</strong> tour packages in <span className="text-cyan-400 font-semibold">{selectedCategory}</span>
-          </span>
-          <span className="hidden sm:inline text-slate-500">
-            Official tariff card rates applied
-          </span>
-        </div>
-
         {/* Package Grid */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {filteredAndSortedPackages.map((pkg) => (
             <PackageCard
               key={pkg.id}
@@ -152,33 +147,39 @@ export default function PackagesPage({ onOpenInquiry }) {
           ))}
         </div>
 
-        {/* Custom Tailored Tour Banner */}
-        <div className="mt-16 bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 border border-cyan-500/30 rounded-3xl p-8 sm:p-10 text-center">
-          <div className="w-12 h-12 rounded-2xl bg-cyan-500 text-black mx-auto flex items-center justify-center shadow-lg mb-4">
-            <Sparkles className="w-6 h-6" />
-          </div>
-          <h3 className="text-xl sm:text-2xl font-bold font-heading text-white">
-            Need a Large Multi-Cab Group Booking or Customized Circuit?
-          </h3>
-          <p className="mt-2 text-sm text-slate-300 max-w-xl mx-auto">
-            We provide multiple AC Wingers (12+1) and Force Travellers (17+1) for large family yatras, wedding guests, or corporate temple tours.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <button
-              onClick={() => onOpenInquiry('Custom Tailored Group Tour Package')}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-extrabold text-sm shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all flex items-center gap-2"
-            >
-              <span>Request Group Tariff Quote</span>
-            </button>
-            <a
-              href="tel:+917381414499"
-              className="px-6 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-bold text-sm border border-slate-700 transition-all flex items-center gap-2"
-            >
-              <Phone className="w-4 h-4 text-cyan-400" />
-              <span>Call Desk: +91 7381414499</span>
-            </a>
+        {/* Custom Tour Inquiry Box */}
+        <div className="mt-16 bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 rounded-3xl p-8 sm:p-12 border border-amber-500/30 text-center shadow-xl">
+          <div className="max-w-2xl mx-auto space-y-4">
+            <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-500/30">
+              Need A Customized Multi-Day Tour?
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
+              Planning Koraput, Daringbadi, or Special Temple Darshans?
+            </h3>
+            <p className="text-sm text-slate-300 leading-relaxed">
+              We provide tailored outstation packages with dedicated chauffeurs fluent in Hindi, Odia, Bengali, and English. Speak directly with our dispatch desk to plan custom night halts and vehicle options.
+            </p>
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button
+                onClick={() => onOpenInquiry('Custom Multi-Day Outstation Package Inquiry')}
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2"
+              >
+                <Sparkles className="w-4 h-4 text-black" />
+                <span>Discuss Custom Tour Package</span>
+              </button>
+              <a
+                href="https://wa.me/917381414499?text=Hello%20Shree%20Khetra%20Yatra,%20I%20would%20like%20to%20discuss%20a%20customized%20tour%20package."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>WhatsApp: +91 7381414499</span>
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   );

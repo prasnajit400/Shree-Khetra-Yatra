@@ -170,11 +170,11 @@ export default function HomePage({ onOpenInquiry }) {
 
               <div className="pt-4 flex flex-wrap gap-4">
                 <Link
-                  to="/pilgrimage"
+                  to="/odisha-tourism"
                   className="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-sm transition-all shadow-md flex items-center gap-2"
                 >
                   <Sparkles className="w-4 h-4 text-black" />
-                  <span>Read Complete Pilgrimage Guide</span>
+                  <span>Explore Odisha State Tourism</span>
                 </Link>
                 <button
                   onClick={() => onOpenInquiry('Senior Citizen Pilgrimage Request')}

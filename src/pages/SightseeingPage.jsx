@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { sightseeingRegions, sightseeingSpots } from '../data/sightseeingData';
-import { MapPin, Clock, Compass, Ticket, Info, Check, ArrowRight, Car, Sparkles, Filter, Phone } from 'lucide-react';
+import { MapPin, Clock, Compass, Check, ArrowRight, Car, Sparkles, Filter, Phone } from 'lucide-react';
 
 export default function SightseeingPage({ onOpenInquiry }) {
   const [selectedRegion, setSelectedRegion] = useState('All');
@@ -147,14 +147,6 @@ export default function SightseeingPage({ onOpenInquiry }) {
                       </div>
                     ))}
                   </div>
-
-                  {/* Tips Note */}
-                  {spot.tips && (
-                    <div className="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs text-amber-200 flex items-start gap-2">
-                      <Info className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
-                      <span>{spot.tips}</span>
-                    </div>
-                  )}
                 </div>
               </div>
 
@@ -207,4 +199,3 @@ export default function SightseeingPage({ onOpenInquiry }) {
     </div>
   );
 }
-

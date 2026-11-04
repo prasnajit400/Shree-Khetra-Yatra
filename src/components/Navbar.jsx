@@ -24,11 +24,11 @@ export default function Navbar({ onOpenInquiry }) {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // 6 genuine tabs as requested
+  // 6 tabs with Odisha State Tourism
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Sightseeing', path: '/sightseeing' },
-    { name: 'Pilgrimage Guide', path: '/pilgrimage' },
+    { name: 'Odisha State Tourism', path: '/odisha-tourism' },
     { name: 'Tour Packages', path: '/packages' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Contact Us', path: '/contact' }
@@ -36,34 +36,31 @@ export default function Navbar({ onOpenInquiry }) {
 
   return (
     <header className="w-full sticky top-0 z-40 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
-      {/* 🚀 MAIN NAVIGATION BAR - AT THE VERY TOP WITH LOGO */}
+      {/* 🚀 MAIN NAVIGATION BAR - AT THE VERY TOP WITH NEW LOGO & SLOGAN */}
       <nav
         className={`w-full transition-all duration-300 ${
           scrolled
-            ? 'bg-slate-950/95 backdrop-blur-xl py-2.5'
-            : 'bg-slate-950/90 backdrop-blur-lg py-3'
+            ? 'bg-slate-950/95 backdrop-blur-xl py-2'
+            : 'bg-slate-950/90 backdrop-blur-lg py-2.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
-          {/* Logo & Brand Identity (Positioned on the VERY TOP) */}
+          {/* Logo & Brand Identity (New Logo & Slogan) */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 via-orange-500 to-amber-400 flex items-center justify-center text-black shadow-[0_0_20px_rgba(245,158,11,0.4)] group-hover:scale-105 transition-transform shrink-0">
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 2v20" />
-                <path d="M2 12h20" />
-                <path d="m4.93 4.93 14.14 14.14" />
-                <path d="m19.07 4.93-14.14 14.14" />
-                <circle cx="12" cy="12" r="3" fill="#000000" />
-              </svg>
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden bg-black border border-slate-800 shadow-[0_0_20px_rgba(6,182,212,0.3)] group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center">
+              <img
+                src={`${import.meta.env.BASE_URL}images/logo-new.jpg`}
+                alt="Shree Khetra Yatra"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
-              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-amber-400 transition-colors font-heading block leading-none">
+              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-cyan-400 transition-colors font-heading block leading-none">
                 Shree Khetra Yatra
               </span>
-              <span className="text-[10px] font-bold text-cyan-400 tracking-wider uppercase block mt-1">
-                Puri Dham Cab & Pilgrimage Logistics
+              <span className="text-[10px] sm:text-[11px] font-bold text-cyan-400 tracking-wider uppercase block mt-1">
+                Comfortable and Safe Journey
               </span>
             </div>
           </Link>
@@ -186,7 +183,7 @@ export default function Navbar({ onOpenInquiry }) {
         )}
       </nav>
 
-      {/* 🚀 COMBINED SINGLE INFO LINE (Directly below Logo & Navigation in ONE cohesive heading) */}
+      {/* 🚀 COMBINED SINGLE INFO LINE */}
       <div className="bg-slate-950 text-slate-300 text-[11px] sm:text-xs py-1.5 px-3 border-t border-b border-slate-800/80 backdrop-blur-md overflow-hidden relative">
         
         {/* Desktop View (screens >= 1024px): Centered & Static */}
@@ -223,7 +220,7 @@ export default function Navbar({ onOpenInquiry }) {
           </a>
         </div>
 
-        {/* Mobile & Tablet View (screens < 1024px): Smooth Auto-Scrolling Ticker (never cut off!) */}
+        {/* Mobile & Tablet View (screens < 1024px): Smooth Auto-Scrolling Ticker */}
         <div className="lg:hidden flex overflow-hidden">
           <div className="animate-marquee-smooth flex items-center gap-4 whitespace-nowrap py-0.5">
             {/* Set 1 */}

@@ -1,16 +1,20 @@
 import React from 'react';
-import { Clock, Car, Star, Check, ArrowRight, MessageSquare, ShieldCheck } from 'lucide-react';
+import { Clock, Car, Star, Check, ArrowRight, MessageSquare, PhoneCall } from 'lucide-react';
 
 export default function PackageCard({ pkg, onBook }) {
+  const isCustomPrice = pkg.isCustomPrice || pkg.priceDisplay?.toLowerCase().includes('discuss');
+
   const whatsappBookingUrl = `https://wa.me/917381414499?text=${encodeURIComponent(
-    `Hello Shree Khetra Yatra, I would like to book/inquire about: ${pkg.title} (${pkg.priceDisplay})`
+    isCustomPrice
+      ? `Hello Shree Khetra Yatra, I would like to inquire about the tour package: ${pkg.title}. Please provide best customized quote.`
+      : `Hello Shree Khetra Yatra, I would like to book/inquire about: ${pkg.title} (${pkg.priceDisplay})`
   )}`;
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden flex flex-col justify-between group">
       <div>
         {/* Card Header & Image */}
-        <div className="relative h-56 sm:h-60 overflow-hidden">
+        <div className="relative h-56 sm:h-60 overflow-hidden bg-slate-900">
           <img
             src={pkg.image}
             alt={pkg.title}
@@ -26,7 +30,7 @@ export default function PackageCard({ pkg, onBook }) {
             </span>
             {pkg.badge && (
               <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-400 text-slate-900 shadow-sm flex items-center gap-1">
-                ⭐ {pkg.badge}
+                ★ {pkg.badge}
               </span>
             )}
           </div>
@@ -39,7 +43,7 @@ export default function PackageCard({ pkg, onBook }) {
             </span>
             <span className="flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-lg">
               <Car className="w-3.5 h-3.5 text-brand-400" />
-              <span>{pkg.vehicleType}</span>
+              <span className="line-clamp-1 max-w-[140px]">{pkg.vehicleType}</span>
             </span>
           </div>
         </div>
@@ -53,7 +57,7 @@ export default function PackageCard({ pkg, onBook }) {
               <span className="text-slate-400 font-normal">({pkg.reviewsCount} reviews)</span>
             </div>
             <span className="text-[11px] text-emerald-700 bg-emerald-50 font-semibold px-2 py-0.5 rounded-md border border-emerald-200">
-              Native Chauffeur
+              Verified Chauffeur
             </span>
           </div>
 
@@ -85,30 +89,30 @@ export default function PackageCard({ pkg, onBook }) {
         <div className="flex items-baseline justify-between mb-3">
           <div>
             <span className="text-[11px] font-semibold text-slate-400 block uppercase tracking-wider">
-              Fixed All-Inclusive Fare
+              {isCustomPrice ? "Package Fare" : "Fixed All-Inclusive Fare"}
             </span>
             <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-black text-slate-900 font-heading">
+              <span className={`text-xl sm:text-2xl font-black font-heading ${isCustomPrice ? "text-amber-600" : "text-slate-900"}`}>
                 {pkg.priceDisplay}
               </span>
-              {pkg.originalPrice && (
+              {pkg.originalPrice && !isCustomPrice && (
                 <span className="text-xs text-slate-400 line-through">
                   ₹{pkg.originalPrice}
                 </span>
               )}
             </div>
           </div>
-          <span className="text-[11px] font-bold text-brand-700 bg-brand-100/60 px-2 py-1 rounded-md">
-            {pkg.pricingNote}
+          <span className="text-[11px] font-bold text-brand-700 bg-brand-100/60 px-2.5 py-1 rounded-md">
+            {pkg.pricingNote || (isCustomPrice ? "Discuss with Desk" : "Official Tariff")}
           </span>
         </div>
 
         <div className="grid grid-cols-2 gap-2">
           <button
-            onClick={() => onBook(pkg.title)}
-            className="w-full py-2.5 px-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-1.5"
+            onClick={() => onBook(isCustomPrice ? `${pkg.title} (Custom Quote Request)` : `${pkg.title} (${pkg.priceDisplay})`)}
+            className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-extrabold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-1.5 active:scale-98"
           >
-            <span>Book / Inquiry</span>
+            <span>{isCustomPrice ? "Inquire & Quote" : "Book / Inquiry"}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
           
@@ -126,4 +130,3 @@ export default function PackageCard({ pkg, onBook }) {
     </div>
   );
 }
-
