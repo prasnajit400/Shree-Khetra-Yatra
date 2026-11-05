@@ -55,13 +55,13 @@ export default function OdishaTourismPage({ onOpenInquiry }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         
         {/* Category Filter Pills */}
-        <div className="flex items-center justify-center flex-wrap gap-2 pb-4">
-          <div className="flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md p-1.5 rounded-2xl border border-slate-800 overflow-x-auto max-w-full">
+        <div className="flex items-center justify-start sm:justify-center overflow-x-auto max-w-full pb-3 scrollbar-none px-1">
+          <div className="inline-flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md p-1.5 rounded-2xl border border-slate-800 shrink-0">
             {tourismRegions.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap shrink-0 transition-all ${
                   selectedCategory === cat
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-black shadow-[0_0_20px_rgba(6,182,212,0.5)] scale-105'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/60'

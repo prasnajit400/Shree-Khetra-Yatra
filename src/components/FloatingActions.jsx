@@ -10,10 +10,10 @@ export default function FloatingActions({ onOpenInquiry }) {
       <div className="fixed bottom-6 left-5 z-40 sm:hidden">
         <a
           href="tel:+917381414499"
-          className="flex items-center justify-center w-13 h-13 rounded-full bg-slate-900 text-amber-400 shadow-xl border-2 border-amber-400/30 active:scale-95 transition-transform"
+          className="relative flex items-center justify-center w-14 h-14 rounded-full bg-slate-900 text-amber-400 shadow-2xl border-2 border-amber-400/40 hover:scale-105 active:scale-95 transition-all"
           aria-label="Call Shree Khetra Yatra"
         >
-          <Phone className="w-6 h-6 fill-amber-400" />
+          <Phone className="w-7 h-7 fill-amber-400 text-amber-400" />
         </a>
       </div>
 

@@ -58,7 +58,7 @@ export default function App() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-black">
+    <div className="flex flex-col min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500 selection:text-black overflow-x-hidden w-full max-w-full">
       <ScrollToTop />
       
       {/* Sticky Header Navbar with 6 Tabs */}
