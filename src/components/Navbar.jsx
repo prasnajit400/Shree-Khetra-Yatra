@@ -35,7 +35,7 @@ export default function Navbar({ onOpenInquiry }) {
   ];
 
   return (
-    <header className="w-full sticky top-0 z-40 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+    <header className="w-full sticky top-0 z-50 transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
       {/* 🚀 MAIN NAVIGATION BAR - AT THE VERY TOP WITH NEW LOGO & SLOGAN */}
       <nav
         className={`w-full transition-all duration-300 ${

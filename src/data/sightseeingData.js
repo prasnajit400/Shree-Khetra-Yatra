@@ -59,7 +59,7 @@ export const sightseeingSpots = [
     distanceFromDesk: "48 km from Biragobindapur Hub",
     bestTime: "07:00 AM – 02:00 PM",
     duration: "4 - 5 Hours (including boat cruise)",
-    entryFee: "Motorized boat rental at OTDC counter (₹1,500 – ₹3,000 per boat)",
+    entryFee: "Motorized boat rental at authorized jetty counter (₹1,500 – ₹3,000 per boat)",
     image: `${base}images/hero-chilika.jpg`,
     description: "Satapada sits at the meeting point of Chilika lagoon and the Bay of Bengal. Devotees and nature lovers board motorized country boats to spot endangered Irrawaddy dolphins and visit Rajahansa Island and the scenic Sea Mouth (Muhan).",
     highlights: [
@@ -68,7 +68,7 @@ export const sightseeingSpots = [
       "Rajahansa Island with fresh coastal breeze and red crabs",
       "Winter migratory bird flocks (Nov – Feb)"
     ],
-    tips: "Our drivers accompany you directly to the official OTDC ticket counter to prevent private middleman touts."
+    tips: "Our drivers accompany you directly to the authorized ticket counter to prevent private middleman touts."
   },
   {
     id: "dhauli-shanti-stupa-spot",

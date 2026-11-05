@@ -66,9 +66,9 @@ export const odishaDestinations = [
       "Sea Mouth (Muhan) — the dramatic meeting point of freshwater Chilika and the Bay of Bengal",
       "Rajahansa Island sandbar stroll between the lagoon and sea surf",
       "Over 160 species of vibrant migratory birds arriving from Central Asia and Siberia",
-      "Fresh coastal seafood and fish fry at local OTDC tourism counters"
+      "Fresh coastal seafood, crab, and prawn fry at lakeside food stalls and eateries"
     ],
-    travelTip: "We assist with official OTDC boat ticketing counters to ensure safe life jackets and honest boat tariffs."
+    travelTip: "Our drivers guide you directly to authorized boat boarding points with life-jacket safety and verified tariffs."
   },
   {
     id: "bhubaneswar-temple-circuit",

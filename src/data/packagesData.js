@@ -22,11 +22,11 @@ export const packages = [
       "AC Vehicle of your choice with native courteous chauffeur",
       "80 Km / 8 Hours inclusive running limit",
       "Doorstep pick-up & drop from your Puri hotel or Grand Road",
-      "Boat ride coordination & official OTDC ticketing counter assistance",
-      "Unhurried halt at Satapada Chilika Tourism complex"
+      "Boat ride coordination & authorized jetty ticketing assistance",
+      "Unhurried halt at Satapada Chilika lakefront complex"
     ],
     exclusions: [
-      "OTDC / Private motorized boat hire charges",
+      "Motorized boat hire charges (payable directly at boat association counter)",
       "Personal meals, snacks & seafood at island stops",
       "Entry fees to any optional private exhibits"
     ],
